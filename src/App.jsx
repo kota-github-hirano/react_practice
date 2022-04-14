@@ -1,7 +1,9 @@
-import React from "react"; //必須ではなくなった
-import ReactDom from "react-dom"; //コンポーネントをHTMLに反映
-import App from "./App";
-/** コンポーネント済み
+//.jsでも使えるが、.jsxにしておくとコンポーネントとして分かりやすい
+//コンポーネント名は必ず先頭を大文字から初める
+//パスカルケース(先頭大文字＋単語区切り大文字)で命名
+//例）SomeComponent
+import React from "react";
+
 const App = () => {
   return (
     // return内は一つのタグで囲まないとエラーとなる(入れ子は可能)
@@ -15,7 +17,5 @@ const App = () => {
     </>
   );
 };
- */
 
-//public/index.htmlの<div id="root"></div>に関数Appを反映
-ReactDom.render(<App />, document.getElementById("root"));
+export default App;
