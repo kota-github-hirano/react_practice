@@ -53,29 +53,34 @@ const App = () => {
     // <></>
     <>
       <h1 style={{ color: "red" }}>こんにちは！</h1>
+      {/*
+      //イベントの割り当て
+      //キャメルケース(先頭小文字＋＋単語区切り大文字)={関数名}
+      //{}:javascriptとして読まれる
+      */}
       <p style={contentStyle}>お元気ですか？</p>
+      {/**
+      //スタイルの当て方
+      //キャメルケース
+      //直接書く場合
+      //style={{キャメルケース:"文字列"}},{外}:js書きます,{内}jsのオブジェクト
+      //変数を使用する場合も同様
+      //style={contentStyle}
+       */}
       <ColorfulMessage color="pink" message="お元気です" />
       <ColorfulMessage color="black">風邪です</ColorfulMessage>
+      {/**
+      //props:コンポーネントに投げる変数（動的に変数を渡してcompornentをすっきりさせる）
+      // <ColorfulMessage color="blue" message="お元気ですか？" />
+      // <コンポーネント名 変数1=値1　変数2=値2>
+      */}
       <button onClick={onClickCountUp}>カウントアップ!</button>
       <br />
       <button onClick={onClickShowFlag}>on/off</button>
       <p>{num}</p>
+      {/* <></>内のコメント文の書き方 */}
       {faceShowFlag && <p>( 'o')</p>}
     </>
-    //イベントの割り当て
-    //キャメルケース(先頭小文字＋＋単語区切り大文字)={関数名}
-    //{}:javascriptとして読まれる
-    //
-    //スタイルの当て方
-    //キャメルケース
-    //直接書く場合
-    //style={{キャメルケース:"文字列"}},{外}:js書きます,{内}jsのオブジェクト
-    //変数を使用する場合も同様
-    //style={contentStyle}
-
-    //props:コンポーネントに投げる変数（動的に変数を渡してcompornentをすっきりさせる）
-    // <ColorfulMessage color="blue" message="お元気ですか？" />
-    // <コンポーネント名 変数1=値1　変数2=値2>
   );
 };
 
