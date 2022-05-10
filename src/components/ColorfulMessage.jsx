@@ -1,6 +1,7 @@
 import React from "react";
 
 const ColorfulMessage = (props) => {
+  //console.log("からふる");
   //console.log(props);
   const { color, children } = props; //propsから要素を分割代入
   const contentLadyStyle = {
