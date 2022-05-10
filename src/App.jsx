@@ -2,11 +2,15 @@
 //コンポーネント名は必ず先頭を大文字から初める
 //パスカルケース(先頭大文字＋単語区切り大文字)で命名
 //例）SomeComponent
-import React from "react";
+import React, { useState } from "react";
 import ColorfulMessage from "./components/ColorfulMessage";
 
 const App = () => {
-  const onClickButton = () => alert();
+  const onClickCountUp = () => {
+    //alert();
+    setNum(num + 1);
+  };
+  const [num, setNum] = useState(0); //[変数名,更新関数名]=useState(初期値)
   const contentStyle = {
     color: "blue",
     fontSize: "18px"
@@ -23,7 +27,8 @@ const App = () => {
       <p style={contentStyle}>お元気ですか？</p>
       <ColorfulMessage color="pink" message="お元気です" />
       <ColorfulMessage color="black">風邪です</ColorfulMessage>
-      <button onClick={onClickButton}>ボタン</button>
+      <button onClick={onClickCountUp}>カウントアップ!</button>
+      <p>{num}</p>
     </>
     //イベントの割り当て
     //キャメルケース(先頭小文字＋＋単語区切り大文字)={関数名}
