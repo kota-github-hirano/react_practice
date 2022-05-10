@@ -3,6 +3,7 @@
 //パスカルケース(先頭大文字＋単語区切り大文字)で命名
 //例）SomeComponent
 import React from "react";
+import ColorfulMessage from "./components/ColorfulMessage";
 
 const App = () => {
   const onClickButton = () => alert();
@@ -10,6 +11,7 @@ const App = () => {
     color: "blue",
     fontSize: "18px"
   };
+
   return (
     // return内は一つのタグで囲まないとエラーとなる(入れ子は可能)
     // <div></div>
@@ -19,6 +21,8 @@ const App = () => {
     <>
       <h1 style={{ color: "red" }}>こんにちは！</h1>
       <p style={contentStyle}>お元気ですか？</p>
+      <ColorfulMessage color="pink" message="お元気です" />
+      <ColorfulMessage color="black">風邪です</ColorfulMessage>
       <button onClick={onClickButton}>ボタン</button>
     </>
     //イベントの割り当て
@@ -31,6 +35,10 @@ const App = () => {
     //style={{キャメルケース:"文字列"}},{外}:js書きます,{内}jsのオブジェクト
     //変数を使用する場合も同様
     //style={contentStyle}
+
+    //props:コンポーネントに投げる変数（動的に変数を渡してcompornentをすっきりさせる）
+    // <ColorfulMessage color="blue" message="お元気ですか？" />
+    // <コンポーネント名 変数1=値1　変数2=値2>
   );
 };
 
