@@ -5,7 +5,8 @@
 //パスカルケース(先頭大文字＋単語区切り大文字)で命名
 //例）SomeComponent
 import React, { useEffect, useState } from "react";
-import ColorfulMessage from "./components/ColorfulMessage";
+//import ColorfulMessage from "./components/ColorfulMessage";
+import { ColorfulMessage } from "./components/ColorfulMessage"; //←こっちだと名前のミスが分かりやすい
 
 const App = () => {
   console.log("最初");

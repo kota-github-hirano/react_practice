@@ -1,6 +1,8 @@
 import React from "react";
 
-const ColorfulMessage = (props) => {
+//const ColorfulMessage = (props) => {
+export const ColorfulMessage = (props) => {
+  //普通のexportをよく使う
   //console.log("からふる");
   //console.log(props);
   const { color, children } = props; //propsから要素を分割代入
@@ -17,4 +19,4 @@ const ColorfulMessage = (props) => {
   return <p style={contentLadyStyle}>{children}</p>;
 };
 
-export default ColorfulMessage;
+//export default ColorfulMessage;　//デフォルトexportはタイプミスにつながる
